@@ -7,7 +7,7 @@ function registerInjectionScript() {
     id:  'injection-script',
     js:  ['js/inject.js'],
     css: ['css/inject.css'],
-    matches: chromeURLs,
+    matches: [...chromeURLs,'chrome-untrusted://terminal','chrome-untrusted://crosh','chrome-extension://mmfbcljfglbokpmkimbfghdkjmjhdgbg/'],
     runAt: 'document_end'
   }]).then(() => {
     console.log('Injection script registered!');
